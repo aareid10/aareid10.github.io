@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Shoppable Vertical Banner</title>
+    <link rel="stylesheet" href="./assets/styles/app.scss">
+  </head>
+
+  <body>
+
+    <div id="shopunit">
+
+      <div id="shop__components">
+
+        <div id="shop__hotspots"></div>
+
+         <div id="shop__panel" class="shop__panel--ready">
+
+           <img id="shop__panel_product" class="closed" src="https://espncreativeworks.com/users/reid/shopablevid/vertical_shopable_video/static/revision2/pants.1ebcbc75.png" alt="">
+
+           <div id="shop__panel_meta">
+
+             <p id="shop__panel_description" class="flexFont"></p>
+             <p id="shop__panel_brand" class="flexFont"></p>
+             <p id="shop__panel_pricing" class="flexFont">
+               <span id="price"></span>
+               <span id="sale"></span>
+             </p>
+
+             <div id="shop__panel_cta" onClick="{this.handleClick}">
+               <a href="" target="_blank">
+                 <img src="https://secure.espncdn.com/promotions/bsa/2019/templates/vertical-unit/shoppable/imgs/btn_shop.jpg" alt="Go to shop">
+               </a>
+             </div>
+
+           </div>
+
+           <div id="shop__panel_close">
+             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 16.094l-4.157-4.104 4.1-4.141-1.849-1.849-4.105 4.159-4.156-4.102-1.833 1.834 4.161 4.12-4.104 4.157 1.834 1.832 4.118-4.159 4.143 4.102 1.848-1.849z"></path></svg>
+           </div>
+
+         </div>
+
+         <div id="shop__bg">
+           <iframe id="shop__bg__player" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+         </div>
+
+         <div id="shop__screen"></div>
+
+      </div>
+
+    </div>
+
+  </body>
+
+  <script src="./assets/scripts/modules/app.js"></script>
+  <script>
+    window.cycleDelay = 1500;
+    window.cycleDuration = 31500;
+    window.onload = function(event) {
+			shopunit.initialize(
+        '%%CLICK_URL_UNESC%%%%DEST_URL%%',
+        'shop__screen'
+      );
+		};
+  </script>
+
+</html>

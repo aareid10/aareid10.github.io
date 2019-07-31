@@ -1,0 +1,27 @@
+$width-banner--min: 320px;
+$width-banner--max: 640px;
+$height-banner--min: 480px;
+$height-banner--max: 960px;
+
+$color-white: #fff;
+$color-black: #000;
+$color-off-black: #333;
+$color-controls: $color-white;
+$color-hotspot: #f00;
+$color-panel-shadow: #011627;
+$color-hotspot-shadow: $color-white;
+$color-hotspot__hover: #F03A47;
+
+$animate-duration-pulse: 100ms;
+$animate-duration-components: 1500ms;
+$animate-duration-controls: 400ms;
+$animate-duration-logo: 400ms;
+$animate-duration-logo--before: 500ms;
+$animate-delay-logo--before: 1000ms;
+$animate-duration-panel: 400ms;
+$animate-duration-panel-image--opened: 500ms;
+$animate-duration-panel-image--closed: 2000ms;
+
+
+$ease-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+$ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);

@@ -1,0 +1,61 @@
+@import 'vars.scss';
+@import 'mixins.scss';
+@import 'animation.scss';
+@import 'extends.scss';
+
+
+html {
+  overflow: hidden;
+  background: $color-white;
+}
+
+body {
+  background: $color-off-black;
+  background-image: linear-gradient(to bottom right, $color-off-black, $color-black);
+  margin: 0;
+  @extend %vertical__display;
+}
+
+
+#shopunit {
+
+  @extend %util__reset;
+
+  @extend %vertical__display;
+
+  #shop__componenets {
+
+    @extend %shop__componenets;
+
+    @extend %vertical__display;
+
+    #shop__hotspots {
+
+      @extend %shop__hotspot_wrapper;
+
+      .hotspot {
+        @extend %shop__hotspot;
+      }
+
+    }
+
+    #shop__panel {
+
+      @extend %shop__panel;
+      #shop__panel_close        { @extend %shop__panel_close; }
+      #shop__panel_product      { @extend %shop__panel_product; }
+      #shop__panel_meta         { @extend %shop__panel_meta; }
+      #shop__panel_description  { @extend %shop__panel_description; }
+      #shop__panel_brand        { @extend %shop__panel_brand; }
+      #shop__panel_pricing      { @extend %shop__panel_pricing; }
+      #shop__panel_cta          { @extend %shop__panel_cta; }
+
+    }
+
+    #shop__bg {
+      @extend %shop__bg;
+    }
+
+  }
+
+}

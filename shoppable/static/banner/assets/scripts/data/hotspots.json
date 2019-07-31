@@ -1,0 +1,64 @@
+{
+	"hotspots": [{
+			"isVisible": true,
+			"pulseRate": 500,
+			"id": "hspt1",
+			"item": "product_sweater.jpg",
+			"image": "https://espncreativeworks.com/users/reid/shopablevid/media/static_version/sweater.png",
+			"url": "https://www.target.com/c/blazers-sport-coats-men-s-clothing/-/N-55929",
+			"polarity": "bot",
+			"styles": {
+				"top": "13.5%",
+				"left": "48.4%",
+				"animation-duration": "1500ms"
+			},
+			"meta": {
+				"description": "Men's Standard Fit Long Sleeve Crew Neck Pullover Sweater™",
+				"brand": "Goodfellow & Co™",
+				"price": "$24.99",
+				"sale": false
+			}
+		},
+		{
+			"isVisible": true,
+			"pulseRate": 550,
+			"id": "hspt2",
+			"item": "product_shoes.jpg",
+			"image": "https://espncreativeworks.com/users/reid/shopablevid/media/static_version/shoes.png",
+			"url": "https://www.target.com/c/men-s-shoes/-/N-5xu1w",
+			"polarity": "top",
+			"meta": {
+				"description": "Men's Puma Suede G Spikeless Golf Shoes",
+				"brand": "Quiet Shade",
+				"price": "$79.96",
+				"sale": true
+			},
+			"styles": {
+				"top": "87.5%",
+				"left": "57.5%",
+				"animation-duration": "1550ms"
+			}
+		},
+		{
+			"isVisible": false,
+			"pulseRate": 600,
+			"id": "hspt3",
+			"item": "product_pants.jpg",
+			"image": "https://espncreativeworks.com/users/reid/shopablevid/media/static_version/pants.png",
+			"url": "https://www.target.com/c/pants-men-s-clothing/-/N-5xu29",
+			"polarity": "bot",
+			"meta": {
+				"description": "Men's Regular Straight Fit Chino Pants",
+				"brand": "Goodfellow & Co™ Garnet Rose",
+				"price": "$27.99",
+				"sale": false
+			},
+			"styles": {
+				"top": "60%",
+				"left": "40%",
+				"animation-duration": "1600ms"
+			}
+		}
+	]
+
+}

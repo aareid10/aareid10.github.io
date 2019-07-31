@@ -1,0 +1,13 @@
+{
+  "modules": false,
+  "plugins": {
+    'rucksack-css': {
+      'hexrgba': true,
+      'clearfix': true,
+      'easings': true,
+      'fallbacks': true,
+      'autoprefixing': true
+    },
+    'cssnano': {},
+  }
+}

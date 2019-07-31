@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>classes/shopPlayer.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="ShopHotspot.html">ShopHotspot</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.animatePanel">animatePanel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.animateProduct">animateProduct</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.animateProductOff">animateProductOff</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.animateProductOn">animateProductOn</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.checkPanel">checkPanel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.checkPolarity">checkPolarity</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.checkProduct">checkProduct</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.generate">generate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.lifecycle">lifecycle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.parse">parse</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.populate">populate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.updatePanel">updatePanel</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="ShopPanel.html">ShopPanel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.checkClose">checkClose</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.checkCta">checkCta</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.checkPanel">checkPanel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.checkPolarity">checkPolarity</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.handleClose">handleClose</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.handleCta">handleCta</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.handler">handler</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.resolveClose">resolveClose</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.resolveCta">resolveCta</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="ShopPlayer.html">ShopPlayer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPlayer.html#.checkInterval">checkInterval</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPlayer.html#.execute">execute</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPlayer.html#.initialize">initialize</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPlayer.html#.isFinshed">isFinshed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPlayer.html#.isPaused">isPaused</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPlayer.html#.reset">reset</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPlayer.html#.resolve">resolve</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-modules_app.html">modules/app</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-modules_app.html#~clickThroughConfig">clickThroughConfig</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-modules_app.html#~clickThroughLink">clickThroughLink</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-modules_app.html#~flexFontInit">flexFontInit</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-modules_app.html#~flexFontRefresh">flexFontRefresh</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-modules_app.html#~initialize">initialize</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-modules_app.html#~preloadImages">preloadImages</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-StateGlobal.html">StateGlobal</a></span></li><li class="nav-heading">Events</li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="global.html#event:vimeoplayer--ready">vimeoplayer--ready</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">classes/shopPlayer.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Player from '@vimeo/player'
+import StateGlobal from '../states/state.global'
+import StateHotspots from '../data/hotspots.json'
+import ShopHotspot from '../classes/shopHotspot'
+import ShopPanel from '../classes/shopPanel'
+
+
+export default class ShopPlayer {
+
+  /**
+   * Property (constructor) in ShopPlayer which creates the class object.
+   * @classdesc This is a description of the ShopPlayer class. This module manages the ShopHotspot logic. This module requires the modules {@link module:StateGlobal} {@link module:ShopHotspots}.
+   * @member {Function} ShopPlayer
+   * @constructs
+   * @requires module:@vimeo/player
+   * @requires module:StateGlobal
+   * @requires module:ShopHotspot
+   * @param {null} None no parameter
+   * @example
+   * new ShopPlayer()
+   * @returns {Class} ShopPlayer
+   * @property {object}  ShopPlayer.state  - ShopHotspot state object
+   * @author Alex Reid &lt;https://github.com/aareid10>
+   * @see {@link http://github.com|https://code.espn.com/CreativeWorks-Internal/creativeworks-templates/tree/master/ads/vertical-shoppable-banner|GitHub Repo}
+   * @since 1.0.0
+   */
+  constructor() {
+    this.state = {
+      host: 'https://player.vimeo.com/video/',
+      ready: new Event('vimeoplayer--ready')
+    }
+    this.state.hotspotList = window.hotspotsURL || window.hotspots || StateHotspots
+    this.hooks = {
+      vimeoplayer: document.querySelector('#shop__bg__player'),
+      app: document.querySelector('#shopunit')
+    }
+  }
+
+
+
+  /**
+   * The initialize property. This sets up the background player.
+   * @memberof ShopPlayer
+   * @param {null} None no parameter
+   * @return {null} None no parameter
+   * @throws will never throw an error.
+   * @since 1.0.0
+   */
+  initialize() {
+
+    /**
+     * vimeoplayer Listener - description.
+     * @method
+     * @param {module:ShopPlayer~event:vimeoplayer--ready} e - An Status event.
+     * @listens module:ShopPlayer~event:vimeoplayer--ready
+     * @since 1.0.0
+     */
+    this.hooks.vimeoplayer.addEventListener('vimeoplayer--ready', (e) => {
+      setTimeout(() => {
+        this.hooks.vimeoplayer.className = 'shop__bg__player--ready'
+        return e.data
+      }, 500)
+    }, false)
+
+    return this
+  }
+
+
+
+  /**
+   * The initialize property. This adjusts and runs the background player.
+   * @memberof ShopPlayer
+   * @param {null} None no parameter
+   * @return {null} None no parameter
+   * @throws will never throw an error.
+   * @since 1.0.0
+   */
+  resolve() {
+
+    this.hooks.vimeoplayer.src  = this.state.host + this.state.hotspotList.video.id + this.state.hotspotList.video.params
+    window.player               = new Player(this.hooks.vimeoplayer)
+
+    /**
+     * vimeoplayer--ready - Signal that the Vimeo Embed is ready to be displayed.
+     * @event vimeoplayer--ready
+     * @type {object}
+     * @property {object} Vimeo Player Instance - updated property.
+     * @since 1.0.0
+     */
+    this.hooks.vimeoplayer.dispatchEvent(this.state.ready)
+
+    return this
+  }
+
+
+
+  /**
+   * The reset property. This resets hotspots asssociated with the player.
+   * @memberof ShopPlayer
+   * @param {null} None no parameter
+   * @return {null} None no parameter
+   * @throws will never throw an error.
+   * @since 1.0.0
+   */
+  reset() {
+    document.querySelectorAll('.hotspot').forEach(item => item.remove())
+    setTimeout(() => { new ShopHotspot().parse().populate() }, StateGlobal.timing.cycleDelay)
+    this.state.cycleStart = new Date()
+    if (window.shopunit.logging) console.warn('Hotspots Reset')
+  }
+
+
+
+  /**
+   * The execute property. This tracks and maniplulates hotspots lifecycles in relation to the playback duration.
+   * @memberof ShopPlayer
+   * @param {null} None no parameter
+   * @return {null} None no parameter
+   * @throws will never throw an error.
+   * @since 1.0.0
+   */
+  execute() {
+    this.state.cycleStart = new Date()
+    new ShopHotspot().parse().populate()
+    new ShopPanel().handler()
+    setInterval(() => {
+      if (!this.isPaused()) {
+        if (window.shopunit.logging) console.warn(`video not paused. time remaining ${this.state.remaining}. waiting....`)
+        this.state.remaining = this.checkInterval()
+        if (this.isFinshed()) {
+          this.reset()
+          if (window.shopunit.logging) console.warn('resetting....')
+        }
+      }
+      else {
+        if (window.shopunit.logging) console.warn(`video still paused. time remaining ${this.state.remaining} waiting....`)
+        this.state.cycleStart = new Date(Date.now() - (StateHotspots.video.length - this.state.remaining))
+      }
+    }, StateGlobal.timing.cycleDelay)
+  }
+
+
+
+  /**
+   * The isPaused property. This adjusts and runs the background player.
+   * @memberof ShopPlayer
+   * @param {null} None no parameter
+   * @return {null}  whether or not the player is currently paused.
+   * @throws will never throw an error.
+   * @since 1.0.0
+   */
+  isPaused() {
+    return this.hooks.app.classList.contains('banner--paused')
+  }
+
+
+
+  /**
+   * The isFinshed property. This adjusts and runs the background player.
+   * @memberof ShopPlayer
+   * @param {null} None no parameter
+   * @return {Boolean} whether or not the total playback time has been reached.
+   * @throws will never throw an error.
+   * @since 1.0.0
+   */
+  isFinshed() {
+    return this.state.remaining &lt;= 0
+  }
+
+
+
+  /**
+   * The checkInterval property. This adjusts and runs the background player.
+   * @memberof ShopPlayer
+   * @param {null} None no parameter
+   * @return {Number} Time remaining for the main player in milliseconds.
+   * @throws will never throw an error.
+   * @since 1.0.0
+   */
+  checkInterval() {
+    return StateHotspots.video.length - ( new Date() - this.state.cycleStart )
+  }
+
+
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Wed Jul 31 2019 16:29:17 GMT-0400 (Eastern Daylight Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

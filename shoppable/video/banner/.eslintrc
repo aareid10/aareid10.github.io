@@ -1,0 +1,26 @@
+{
+  "globals": {
+    "window": true,
+    "document": true,
+  },
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "radix": off,
+    "new-cap": off,
+    "no-undef": off,
+    "no-console": off,
+    "no-plusplus": off,
+    "func-names": off,
+    "no-loop-func": off,
+    "no-return-assign": off,
+    "no-param-reassign": off,
+    "no-nested-ternary": off,
+    "no-use-before-define": off,
+    "no-restricted-globals": off,
+    "array-callback-return": off,
+    "no-unused-expressions": off,
+    "class-methods-use-this": off
+  },
+}

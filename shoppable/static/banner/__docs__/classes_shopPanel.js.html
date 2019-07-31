@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>classes/shopPanel.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="ShopHotspot.html">ShopHotspot</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.animatePanel">animatePanel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.animateProduct">animateProduct</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.animateProductOff">animateProductOff</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.animateProductOn">animateProductOn</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.checkPanel">checkPanel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.checkPolarity">checkPolarity</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.checkProduct">checkProduct</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.generate">generate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.parse">parse</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.populate">populate</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopHotspot.html#.updatePanel">updatePanel</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="ShopPanel.html">ShopPanel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.checkClose">checkClose</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.checkCta">checkCta</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.checkPanel">checkPanel</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.checkPolarity">checkPolarity</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.handleClose">handleClose</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.handleCta">handleCta</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.handler">handler</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.resolveClose">resolveClose</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ShopPanel.html#.resolveCta">resolveCta</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-modules_app.html">modules/app</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-modules_app.html#~clickThroughConfig">clickThroughConfig</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-modules_app.html#~clickThroughLink">clickThroughLink</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-modules_app.html#~flexFontInit">flexFontInit</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-modules_app.html#~flexFontRefresh">flexFontRefresh</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-modules_app.html#~initialize">initialize</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-modules_app.html#~preloadImages">preloadImages</a></span></li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-StateGlobal.html">StateGlobal</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">classes/shopPanel.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import StateGlobal from '../states/state.global';
+
+export default class ShopPanel {
+  /**
+   * The ShopPanel Class.
+   * Property (constructor) in ShopPanel which creates the class object. This class manages the ShopPanel logic. This module requires the modules {@link module:StateGlobal}
+   * @classdesc This is a description of the ShopPanel class.
+   * @member {Function} ShopPanel
+   * @access public
+   * @constructs
+   * @requires module:StateGlobal
+   * @param {null} None no parameter
+   * @example
+   * new ShopPanel()
+   * @returns {Class} ShopPanel
+   * @property {object}  ShopPanel.state        						- ShopPanel state object
+   * @property {number}  ShopPanel.state.initDrawDelay      - ShopPanel init Draw Delay
+   * @property {number}  ShopPanel.state.cycleDelay        	- ShopPanel cycle Delay
+   * @property {number}  ShopPanel.state.cycleDuration      - ShopPanel cycle Duration
+   * @property {number}  ShopPanel.state.panelDisplayDelay  - ShopPanel panel Display Delay
+   * @property {object}  ShopPanel.state.hooks        			- ShopPanel DOM elements
+   * @property {element}  ShopPanel.state.hooks.panel       - DOM element for shopPanel
+   * @property {element}  ShopPanel.state.hooks.close       - DOM element for shopPanel close button
+   * @property {element}  ShopPanel.state.hooks.cta        	- DOM element for shopPanel cta
+   * @property {element}  ShopPanel.state.hooks.link        - DOM element for shopPanel cta link
+   * @author Alex Reid &lt;https://github.com/aareid10>
+   * @see {@link http://github.com|https://code.espn.com/CreativeWorks-Internal/creativeworks-templates/tree/master/ads/vertical-shoppable-banner|GitHub Repo}
+   * @since 1.0.0
+   */
+  constructor() {
+    this.state = {};
+    this.state.initDrawDelay = StateGlobal.timing.initDrawDelay;
+    this.state.cycleDelay = window.cycleDelay || StateGlobal.timing.cycleDelay;
+    this.state.cycleDuration = window.cycleDuration || StateGlobal.timing.cycleDuration;
+    this.state.panelDisplayDelay = window.panelDisplayDelay || StateGlobal.timing.panelDisplayDelay;
+    this.state.hooks = {
+      panel: document.querySelector('#shop__panel'),
+      close: document.querySelector('#shop__panel_close'),
+      cta: document.querySelector('#shop__panel_cta'),
+      link: document.querySelector('#shop__panel_cta a')
+    };
+  }
+
+  /**
+   * Property (handler) in ShopPanel which manages the event ShopPanel event handlers.
+   * @function handler
+   * @memberof ShopPanel
+   * @access public
+   * @param {null} None no parameter
+   * @example
+   * ShopPanel.handler()
+   * @returns {null} no return value
+   */
+  handler() {
+    this.state.hooks.close.onclick = () => this.handleClose();
+    this.state.hooks.cta.onclick = e => this.handleCta(e);
+  }
+
+  /**
+   * Property (handleCta) in ShopPanel which registers the cta event handler.
+   * @function handleCta
+   * @memberof ShopPanel
+   * @access public
+   * @param {event} e event object
+   * @example
+   * ShopPanel.handleCta(e)
+   * @returns {null} no return value
+   */
+  handleCta(e) {
+    e.preventDefault();
+    this.state.hooks.cta.className = this.checkPanel() ? 'selected' : '';
+    this.checkPanel() ? setTimeout(this.resolveCta(this.state), this.state.panelClickOutDelay) : '';
+  }
+
+  /**
+   * Property (handleClose) in ShopPanel which registers the close event handler.
+   * @function handleClose
+   * @memberof ShopPanel
+   * @access public
+   * @param {null} None no parameter
+   * @example
+   * ShopPanel.handleClose()
+   * @returns {null} no return value
+   */
+  handleClose() {
+    this.checkClose() ? this.state.hooks.close.setAttribute('class', 'selected') : '';
+    setTimeout(this.resolveClose(this.state), this.state.panelDisplayDelay);
+  }
+
+  /**
+   * Property (resolveCta) in ShopPanel which triggers the cta resolve state.
+   * @function resolveCta
+   * @memberof ShopPanel
+   * @access public
+   * @param {object} state state object
+   * @example
+   * ShopPanel.resolveCta(state)
+   * @returns {null} no return value
+   */
+  resolveCta(state) {
+    state.hooks.cta.className = '';
+    window.open(state.hooks.link.href);
+  }
+
+  /**
+   * Property (resolveClose) in ShopPanel which triggers the close resolve state.
+   * @function resolveClose
+   * @memberof ShopPanel
+   * @access public
+   * @param {object} state state object
+   * @example
+   * ShopPanel.resolveClose(state)
+   * @returns {null} no return value
+   */
+  resolveClose(state) {
+    state.hooks.panel.className = this.checkPolarity() ? 'closed-bottom' : 'closed-top';
+    state.hooks.close.setAttribute('class', '');
+  }
+
+  /**
+   * Property (checkPanel) in ShopPanel which checks if the panel is open.
+   * @function checkPanel
+   * @memberof ShopPanel
+   * @access public
+   * @param {null} None no parameter
+   * @example
+   * ShopPanel.checkPanel()
+   * @returns {Boolean} returns boolean
+   */
+  checkPanel() {
+    return this.state.hooks.panel.className.match('open') !== null;
+  }
+
+  /**
+   * Property (checkPolarity) in ShopPanel which checks the polarity of the hotspot.
+   * @function checkPolarity
+   * @memberof ShopPanel
+   * @access public
+   * @param {null} None no parameter
+   * @example
+   * ShopPanel.checkPolarity()
+   * @returns {Boolean} returns boolean
+   */
+  checkPolarity() {
+    return this.state.hooks.panel.className.match('bottom') !== null;
+  }
+
+  /**
+   * Property (checkCta) in ShopPanel which checks the state of the cta animation.
+   * @function checkCta
+   * @memberof ShopPanel
+   * @access public
+   * @param {null} None no parameter
+   * @example
+   * ShopPanel.checkCta()
+   * @returns {Boolean} returns boolean
+   */
+  checkCta() {
+    return this.state.hooks.cta.className !== 'selected';
+  }
+
+  /**
+   * Property (checkClose) in ShopPanel which checks the state of the close animation.
+   * @function checkClose
+   * @memberof ShopPanel
+   * @access public
+   * @param {null} None no parameter
+   * @example
+   * ShopPanel.checkClose()
+   * @returns {Boolean} returns boolean
+   */
+  checkClose() {
+    return this.state.hooks.close.className !== 'selected';
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on Wed Jul 31 2019 16:28:15 GMT-0400 (Eastern Daylight Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

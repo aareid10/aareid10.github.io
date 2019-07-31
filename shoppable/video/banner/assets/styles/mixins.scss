@@ -1,0 +1,14 @@
+
+@mixin animate($name, $duration, $count, $easing, $direction, $fill, $state) {
+  animation-name: $name;
+  animation-fill-mode: $fill;
+  animation-play-state: $state;
+  animation-duration: $duration;
+  animation-direction: $direction;
+  animation-iteration-count: $count;
+  animation-timing-function: $easing;
+}
+
+ @mixin transition($context) {
+   transition: $context 0.8s ease-out;
+ }

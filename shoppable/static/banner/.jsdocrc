@@ -1,0 +1,24 @@
+{
+  "tags": {
+    "allowUnknownTags": false,
+    "dictionaries": ["jsdoc"]
+  },
+  "source": {
+    "include": ["./assets/scripts/", "README.md"],
+    "includePattern": ".js$|.jsx$",
+    "excludePattern": "(node_modules/|docs)"
+  },
+  "opts": {
+    "template": "node_modules/minami",
+    "encoding": "utf8",
+    "destination": "./__docs__/",
+    "recurse": true,
+    "verbose": true
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": true,
+    "useLongnameInNav": false,
+    "showInheritedInNav": true
+  }
+}

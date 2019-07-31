@@ -1,0 +1,7 @@
+{
+  "plugins": {
+  'posthtml-w3c': {},
+  'posthtml-hint': {},
+  'posthtml-tidy': {}
+  }
+}

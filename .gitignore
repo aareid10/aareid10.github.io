@@ -1,0 +1,15 @@
+# OS generated files #
+######################
+*.DS_Store
+._*
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build Files #
+######################
+node_modules/
+bower_components/
+*.log
+build/
+dist/
