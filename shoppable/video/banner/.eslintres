@@ -1,6 +1,9 @@
 
-/Users/reidal/_Core/_Work/Repos/creativeworks-templates/ads/vertical-shoppable-banner/static/banner/assets/scripts/data/hotspots.json
+/home/alexr/workstation/projects/aareid10.github.io/shoppable/video/banner/assets/scripts/classes/shopHotspot.js
+  168:26  error  'phase' is defined but never used  no-unused-vars
+
+/home/alexr/workstation/projects/aareid10.github.io/shoppable/video/banner/assets/scripts/data/hotspots.json
   0:0  warning  File ignored because of a matching ignore pattern. Use "--no-ignore" to override
 
-✖ 1 problem (0 errors, 1 warning)
+✖ 2 problems (1 error, 1 warning)
 

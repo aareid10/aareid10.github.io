@@ -111,7 +111,7 @@
   height: 50px;
   border-radius: 50px;
   background: $color-hotspot;
-  background: url('https://secure.espncdn.com/promotions/bsa/2019/templates/vertical-unit/shoppable/imgs/hotspot.png');
+  background: url('https://raw.githubusercontent.com/aareid10/aareid10.github.io/master/shoppable/video/banner/assets/media/imgs/hotspot.png');
   @include animate(animate-hotspot-pulse, 2000ms, infinite, $ease-in-out, normal, forwards, running);
   transition: all $ease-in-out;
   background-size: 100%;

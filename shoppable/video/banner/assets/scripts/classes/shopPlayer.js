@@ -1,12 +1,10 @@
-import Player from '@vimeo/player'
-import StateGlobal from '../states/state.global'
-import StateHotspots from '../data/hotspots.json'
-import ShopHotspot from '../classes/shopHotspot'
-import ShopPanel from '../classes/shopPanel'
-
+import Player from '@vimeo/player';
+import StateGlobal from '../states/state.global';
+import StateHotspots from '../data/hotspots.json';
+import ShopHotspot from './shopHotspot';
+import ShopPanel from './shopPanel';
 
 export default class ShopPlayer {
-
   /**
    * Property (constructor) in ShopPlayer which creates the class object.
    * @classdesc This is a description of the ShopPlayer class. This module manages the ShopHotspot logic. This module requires the modules {@link module:StateGlobal} {@link module:ShopHotspots}.
@@ -28,15 +26,13 @@ export default class ShopPlayer {
     this.state = {
       host: 'https://player.vimeo.com/video/',
       ready: new Event('vimeoplayer--ready')
-    }
-    this.state.hotspotList = window.hotspotsURL || window.hotspots || StateHotspots
+    };
+    this.state.hotspotList = window.hotspotsURL || window.hotspots || StateHotspots;
     this.hooks = {
       vimeoplayer: document.querySelector('#shop__bg__player'),
       app: document.querySelector('#shopunit')
-    }
+    };
   }
-
-
 
   /**
    * The initialize property. This sets up the background player.
@@ -47,7 +43,6 @@ export default class ShopPlayer {
    * @since 1.0.0
    */
   initialize() {
-
     /**
      * vimeoplayer Listener - description.
      * @method
@@ -55,17 +50,19 @@ export default class ShopPlayer {
      * @listens module:ShopPlayer~event:vimeoplayer--ready
      * @since 1.0.0
      */
-    this.hooks.vimeoplayer.addEventListener('vimeoplayer--ready', (e) => {
-      setTimeout(() => {
-        this.hooks.vimeoplayer.className = 'shop__bg__player--ready'
-        return e.data
-      }, 500)
-    }, false)
+    this.hooks.vimeoplayer.addEventListener(
+      'vimeoplayer--ready',
+      e => {
+        setTimeout(() => {
+          this.hooks.vimeoplayer.className = 'shop__bg__player--ready';
+          return e.data;
+        }, 500);
+      },
+      false
+    );
 
-    return this
+    return this;
   }
-
-
 
   /**
    * The initialize property. This adjusts and runs the background player.
@@ -76,9 +73,9 @@ export default class ShopPlayer {
    * @since 1.0.0
    */
   resolve() {
-
-    this.hooks.vimeoplayer.src  = this.state.host + this.state.hotspotList.video.id + this.state.hotspotList.video.params
-    window.player               = new Player(this.hooks.vimeoplayer)
+    this.hooks.vimeoplayer.src =
+      this.state.host + this.state.hotspotList.video.id + this.state.hotspotList.video.params;
+    window.player = new Player(this.hooks.vimeoplayer);
 
     /**
      * vimeoplayer--ready - Signal that the Vimeo Embed is ready to be displayed.
@@ -87,12 +84,10 @@ export default class ShopPlayer {
      * @property {object} Vimeo Player Instance - updated property.
      * @since 1.0.0
      */
-    this.hooks.vimeoplayer.dispatchEvent(this.state.ready)
+    this.hooks.vimeoplayer.dispatchEvent(this.state.ready);
 
-    return this
+    return this;
   }
-
-
 
   /**
    * The reset property. This resets hotspots asssociated with the player.
@@ -103,13 +98,13 @@ export default class ShopPlayer {
    * @since 1.0.0
    */
   reset() {
-    document.querySelectorAll('.hotspot').forEach(item => item.remove())
-    setTimeout(() => { new ShopHotspot().parse().populate() }, StateGlobal.timing.cycleDelay)
-    this.state.cycleStart = new Date()
-    if (window.shopunit.logging) console.warn('Hotspots Reset')
+    document.querySelectorAll('.hotspot').forEach(item => item.remove());
+    setTimeout(() => {
+      new ShopHotspot().parse().populate();
+    }, StateGlobal.timing.cycleDelay);
+    this.state.cycleStart = new Date();
+    if (window.shopunit.logging) console.warn('Hotspots Reset');
   }
-
-
 
   /**
    * The execute property. This tracks and maniplulates hotspots lifecycles in relation to the playback duration.
@@ -120,26 +115,25 @@ export default class ShopPlayer {
    * @since 1.0.0
    */
   execute() {
-    this.state.cycleStart = new Date()
-    new ShopHotspot().parse().populate()
-    new ShopPanel().handler()
+    this.state.cycleStart = new Date();
+    new ShopHotspot().parse().populate();
+    new ShopPanel().handler();
     setInterval(() => {
       if (!this.isPaused()) {
-        if (window.shopunit.logging) console.warn(`video not paused. time remaining ${this.state.remaining}. waiting....`)
-        this.state.remaining = this.checkInterval()
+        if (window.shopunit.logging)
+          console.warn(`video not paused. time remaining ${this.state.remaining}. waiting....`);
+        this.state.remaining = this.checkInterval();
         if (this.isFinshed()) {
-          this.reset()
-          if (window.shopunit.logging) console.warn('resetting....')
+          this.reset();
+          if (window.shopunit.logging) console.warn('resetting....');
         }
+      } else {
+        if (window.shopunit.logging)
+          console.warn(`video still paused. time remaining ${this.state.remaining} waiting....`);
+        this.state.cycleStart = new Date(Date.now() - (StateHotspots.video.length - this.state.remaining));
       }
-      else {
-        if (window.shopunit.logging) console.warn(`video still paused. time remaining ${this.state.remaining} waiting....`)
-        this.state.cycleStart = new Date(Date.now() - (StateHotspots.video.length - this.state.remaining))
-      }
-    }, StateGlobal.timing.cycleDelay)
+    }, StateGlobal.timing.cycleDelay);
   }
-
-
 
   /**
    * The isPaused property. This adjusts and runs the background player.
@@ -150,10 +144,8 @@ export default class ShopPlayer {
    * @since 1.0.0
    */
   isPaused() {
-    return this.hooks.app.classList.contains('banner--paused')
+    return this.hooks.app.classList.contains('banner--paused');
   }
-
-
 
   /**
    * The isFinshed property. This adjusts and runs the background player.
@@ -164,10 +156,8 @@ export default class ShopPlayer {
    * @since 1.0.0
    */
   isFinshed() {
-    return this.state.remaining <= 0
+    return this.state.remaining <= 0;
   }
-
-
 
   /**
    * The checkInterval property. This adjusts and runs the background player.
@@ -178,8 +168,6 @@ export default class ShopPlayer {
    * @since 1.0.0
    */
   checkInterval() {
-    return StateHotspots.video.length - ( new Date() - this.state.cycleStart )
+    return StateHotspots.video.length - (new Date() - this.state.cycleStart);
   }
-
-
 }
