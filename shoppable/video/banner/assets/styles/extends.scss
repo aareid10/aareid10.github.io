@@ -2,6 +2,55 @@
 /* * * * * * * * *
  * PROFILES */
 
+
+ %portfolio__version {
+
+  h1 {
+    font-family: 'Major Mono Display', monospace;
+    color: white;
+    max-width: 60%;
+    margin: 5% 0 5px;
+  }
+
+  h2 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    color: white;
+    max-width: 60%;
+    margin: 0 0 5%;
+  }
+
+  h3 {
+    color: white;
+    font-family: Helvetica;
+    font-size: 10px;
+    max-width: 60%;
+    margin: 0 0 -6px;
+  }
+
+  hr {
+    width: 60%;
+  }
+
+  #shopunit,  #shop__panel{
+    // width: 480px;
+    // height: 720px;
+    transform: scale(.75) translateY(-14%);
+  }
+
+  main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 60%;
+    width: 60%;
+  }
+
+ }
+
 %vertical__display {
   position: relative;
   width: 100%;

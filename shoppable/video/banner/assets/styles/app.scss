@@ -73,3 +73,8 @@ body {
   }
 
 }
+
+
+body {
+  @extend %portfolio__version;
+}
