@@ -4,58 +4,71 @@
   <head>
     <meta charset="utf-8">
     <title>Shop-able Vertical Video</title>
-    <script src="https://cdn.jsdelivr.net/gh/aareid10/aareid10.github.io/shoppable/video/banner/dist/app.43f5deab.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aareid10/aareid10.github.io/shoppable/video/banner/dist/app.3745f136.css">
+    <script src="https://cdn.jsdelivr.net/gh/aareid10/aareid10.github.io/shoppable/video/banner/release/app.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aareid10/aareid10.github.io/shoppable/video/banner/release/app.css">
   </head>
 
-  <body >
+  <body class="portfolio">
 
-    <h1>Shoppable Video Banner | Desktop & Mobile</h1>
+    <main>
 
-    <hr>
+      <h1>Shoppable Video Banner</h1>
 
-    <div id="shopunit" style="">
+      <h2>A data-driven highyly-customizable cross-platfrom embeddible shoopable video experince.</h1>
 
-      <div id="shop__components">
+      <h3>
+        <span>Desktop</span>
+        <span>Mobile</span>
+        <span>Video</span>
+        <span>Vimeo</span>
+      </h3>
 
-        <div id="shop__hotspots"></div>
+      <hr>
 
-         <div id="shop__panel" class="shop__panel--ready">
+      <div id="shopunit">
 
-           <img id="shop__panel_product" class="closed" src="https://raw.githubusercontent.com/aareid10/aareid10.github.io/master/shoppable/video/banner/assets/media/imgs/product_pants.jpg" alt="">
+        <div id="shop__components">
 
-           <div id="shop__panel_meta">
+          <div id="shop__hotspots"></div>
 
-             <p id="shop__panel_description" class="flexFont"></p>
-             <p id="shop__panel_brand" class="flexFont"></p>
-             <p id="shop__panel_pricing" class="flexFont">
-               <span id="price"></span>
-               <span id="sale"></span>
-             </p>
+           <div id="shop__panel" class="shop__panel--ready">
 
-             <div id="shop__panel_cta" onClick="{this.handleClick}">
-               <a href="" target="_blank">
-                 <img src="https://raw.githubusercontent.com/aareid10/aareid10.github.io/master/shoppable/video/banner/assets/media/imgs/btn_shop.jpg" alt="Go to shop">
-               </a>
+             <img id="shop__panel_product" class="closed" src="https://raw.githubusercontent.com/aareid10/aareid10.github.io/master/shoppable/video/banner/assets/media/imgs/product_pants.jpg" alt="">
+
+             <div id="shop__panel_meta">
+
+               <p id="shop__panel_description" class="flexFont"></p>
+               <p id="shop__panel_brand" class="flexFont"></p>
+               <p id="shop__panel_pricing" class="flexFont">
+                 <span id="price"></span>
+                 <span id="sale"></span>
+               </p>
+
+               <div id="shop__panel_cta" onClick="{this.handleClick}">
+                 <a href="" target="_blank">
+                   <img src="https://raw.githubusercontent.com/aareid10/aareid10.github.io/master/shoppable/video/banner/assets/media/imgs/btn_shop.jpg" alt="Go to shop">
+                 </a>
+               </div>
+
+             </div>
+
+             <div id="shop__panel_close">
+               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 16.094l-4.157-4.104 4.1-4.141-1.849-1.849-4.105 4.159-4.156-4.102-1.833 1.834 4.161 4.12-4.104 4.157 1.834 1.832 4.118-4.159 4.143 4.102 1.848-1.849z"></path></svg>
              </div>
 
            </div>
 
-           <div id="shop__panel_close">
-             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 16.094l-4.157-4.104 4.1-4.141-1.849-1.849-4.105 4.159-4.156-4.102-1.833 1.834 4.161 4.12-4.104 4.157 1.834 1.832 4.118-4.159 4.143 4.102 1.848-1.849z"></path></svg>
+           <div id="shop__bg">
+             <iframe id="shop__bg__player" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
            </div>
 
-         </div>
+           <div id="shop__screen"></div>
 
-         <div id="shop__bg">
-           <iframe id="shop__bg__player" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-         </div>
-
-         <div id="shop__screen"></div>
+        </div>
 
       </div>
 
-    </div>
+    </main>
 
   </body>
 
