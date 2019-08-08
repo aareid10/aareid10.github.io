@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Genius | Lyrica | Alex Reid</title>
+    <link rel="stylesheet" href="./assets/styles/app.scss">
+  </head>
+
+  <body>
+
+
+    <header class="loading">
+        <h1>Lyrica <span>v.1.0.0<span id="init_msg"> | loading...</span></span> </h1>
+        <h2>the search for the most lyrically prolific artists</h2>
+    </header>
+
+
+    <main id="lyricalProfiler">
+
+
+      <section id="lyricalProfiler__primaryartists">
+
+        <div class="section__header">
+          <span>by Primary Artist</span>
+          <span class="trigger disabled" id="trigger__primaryartists">▶</span>
+        </div class="section__header">
+
+        <div id="lyricalProfiler__primaryartists_display"></div>
+
+      </section>
+
+
+      <section id="lyricalProfiler__actualartists">
+
+        <div class="section__header">
+          <span>by Actual Artist</span>
+          <span class="trigger disabled" id="trigger__actualartists">▶</span>
+        </div class="section__header">
+
+        <div id="lyricalProfiler__actualartists_display"></div>
+
+      </section>
+
+
+      <section id="lyricalProfiler__uniqueness">
+
+        <div class="section__header">
+          <span>by Uniqueness</span>
+          <span class="trigger disabled" id="trigger__uniquewords">▶</span>
+        </div class="section__header">
+
+        <div id="lyricalProfiler__uniqueness_display"></div>
+
+      </section>
+
+
+    </main>
+
+
+  </body>
+
+  <script src="./assets/scripts/lib.lyrica.js" charset="utf-8"></script>
+
+  <script src="./assets/scripts/app.js" charset="utf-8"></script>
+
+</html>

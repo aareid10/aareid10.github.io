@@ -1,0 +1,65 @@
+{
+ "name": "lyrica",
+ "version": "1.0.0",
+ "description": "A song lyric data aggregator.",
+ "main": "index.js",
+ "scripts": {
+  "lint": "npx eslint --ignore-pattern assets/scripts/data/* --fix --debug assets/scripts/**/*  > .eslintres",
+  "git:log": "git log --oneline",
+  "git:cycle": "npm run git:commit && npm run push:upd",
+  "git:commit": "git add . --all && git commit",
+  "push:upd": "git push && git push --all",
+  "build:dev": "parcel index.html --no-cache",
+  "build:qa": "rm -r ./dist; parcel build *.html --no-cache --public-url ./"
+ },
+ "keywords": [],
+ "author": "Alex Reid",
+ "license": "ISC",
+ "husky": {
+  "lint-staged": {
+   "*.{js,json,css,scss,html,md}": [
+    "prettier --write",
+    "git add"
+   ]
+  },
+  "hooks": {
+   "pre-commit": "npm run lint",
+   "pre-checkout": "npm run test:unit"
+  }
+ },
+ "dependencies": {
+  "@babel/runtime-corejs2": "^7.5.5",
+  "can-ndjson-stream": "^1.0.1",
+  "dotenv": "^8.0.0",
+  "ndjson-parse": "^1.0.2",
+  "react": "^16.8.6",
+  "react-dom": "^16.8.6"
+ },
+ "devDependencies": {
+  "@babel/core": "^7.5.5",
+  "@babel/plugin-proposal-class-properties": "^7.4.4",
+  "@babel/plugin-transform-runtime": "^7.5.5",
+  "@babel/preset-env": "^7.4.4",
+  "@babel/preset-react": "^7.0.0",
+  "babel-plugin-module-resolver": "^3.2.0",
+  "babel-plugin-transform-runtime": "^6.23.0",
+  "babel-runtime": "^6.26.0",
+  "cssnano": "^4.1.10",
+  "eslint": "^5.3.0",
+  "eslint-config-airbnb": "^17.1.0",
+  "eslint-config-airbnb-base": "^13.1.0",
+  "eslint-config-prettier": "^4.1.0",
+  "eslint-plugin-import": "^2.16.0",
+  "eslint-plugin-jsx-a11y": "^6.2.1",
+  "eslint-plugin-prettier": "^3.0.1",
+  "eslint-plugin-react": "^7.12.4",
+  "husky": "^1.3.1",
+  "lint-staged": "^8.1.4",
+  "prettier": "^1.16.4",
+  "sass": "^1.20.1",
+  "tailwind-heropatterns": "0.0.7",
+  "tailwindcss": "^1.1.0",
+  "tailwindcss-card": "^0.1.0",
+  "whatwg-fetch": "^3.0.0"
+ }
+}

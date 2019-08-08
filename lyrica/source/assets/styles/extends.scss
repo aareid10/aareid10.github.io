@@ -1,0 +1,117 @@
+
+%basic {
+  @apply bg-hero-connections-white-100;
+  @apply bg-orange-200;
+  @apply py-8 px-24;
+  @apply border-b-8 border-black mb-8;
+  * { transiton: all $animate-duration-1x $ease-out-back; }
+}
+
+
+%header {
+
+  @apply text-black;
+  @apply my-5;
+
+  h1 {
+    @apply text-6xl font-mono font-black;
+    @apply leading-none tracking-logo;
+    text-shadow: 2px 6px 1px yellow;
+    span {
+      @apply text-sm;
+      @apply leading-none tracking-tight;
+      text-shadow: 2px 3px 1px yellow;
+    }
+  }
+
+  h2 {
+    @apply text-sm font-mono font-black;
+    @apply pt-1 inline-block leading-none tracking-tighter;
+    text-shadow: 1px 1px 1px black;
+    color: yellow;
+  }
+
+  &.loading {
+    @include animate(animate-header--loading, $animate-duration-1x, infinite, $ease-in-out, normal, both, running);
+  }
+
+}
+
+
+%section {
+
+  @apply p-1 m-1;
+
+  .section__header {
+
+    @apply text-3xl font-sans font-black;
+    @apply leading-none tracking-header;
+    @apply border-b-32 border-black;
+    min-width: 25vw;
+    text-shadow: 2px 3px 1px yellow;
+
+    .trigger {
+
+      @apply bg-gray-900 border border-black;
+      @apply text-white text-sm font-bold;
+      @apply py-2 px-6 rounded cursor-pointer;
+      @apply inset-y-0 right-0;
+      @apply float-right -mt-2;
+      text-shadow: none;
+
+      &:not(.disabled):hover {
+        @include animate(animate-btn--hover, $animate-duration-4x, 1, $ease-in-out, normal, forwards, running);
+      }
+
+      &.disabled {
+        @apply bg-gray-400 border border-gray-400;
+        @apply text-gray-200 cursor-not-allowed;
+      }
+
+    }
+
+  }
+
+}
+
+
+%artist_card {
+
+  @apply mb-4;
+  @include animate(animate-card--show, $animate-duration-2x, 1, $ease-in-out, normal, forwards, running);
+
+  .card-content {
+
+    @apply border-b-8;
+    margin: 0;
+    color: yellow;
+    border-color: yellow;
+    background: rgba(#333, 0.5);
+
+    .artist-details {
+
+      .artist-rank {
+        @apply text-6xl font-sans font-bold;
+        @apply relative inset-y-0 left-0;
+        @apply float-left -mt-48 ml-8;
+        z-index: 100;
+        text-shadow: 1px 1px 8px rgba(255,255,255, 0.25);
+      }
+
+      .artist-name {
+        @apply text-2xl font-sans font-bold;
+        @apply m-1;
+        text-shadow: 1px 1px 2px rgba(0,0,0, 0.5);
+      }
+
+      .artist-score {
+        @apply text-base font-mono font-medium leading-tight;
+        @apply m-1;
+        text-shadow: 1px 1px 2px rgba(0,0,0, 0.5);
+      }
+
+    }
+
+  }
+
+}

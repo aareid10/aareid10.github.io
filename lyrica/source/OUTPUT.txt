@@ -1,0 +1,20 @@
+app.js:9 ======== LYRICA RAW ANALYSIS RESULTS ========
+app.js:11 Category :: ======== Primary Lyrical Sections ========
+app.js:15 Artist RAnk #1 — Kanye West :: 497 Primary Lyrical Sections
+app.js:15 Artist RAnk #2 — Eminem :: 494 Primary Lyrical Sections
+app.js:15 Artist RAnk #3 — Drake :: 397 Primary Lyrical Sections
+app.js:15 Artist RAnk #4 — Travis Scott :: 354 Primary Lyrical Sections
+app.js:15 Artist RAnk #5 — Meek Mill :: 305 Primary Lyrical Sections
+app.js:12 Category :: ======== Actual Lyrical Sections ========
+app.js:16 Artist RAnk #1 — Drake :: 389 Actual Lyrical Sections
+app.js:16 Artist RAnk #2 — Kanye West :: 387 Actual Lyrical Sections
+app.js:16 Artist RAnk #3 — Lil Wayne :: 352 Actual Lyrical Sections
+app.js:16 Artist RAnk #4 — Eminem :: 350 Actual Lyrical Sections
+app.js:16 Artist RAnk #5 — Travis Scott :: 332 Actual Lyrical Sections
+app.js:13 Category :: ======== Unique Words ========
+app.js:17 Artist RAnk #1 — Eminem :: 7119 Unique Words
+app.js:17 Artist RAnk #2 — Kendrick Lamar :: 5077 Unique Words
+app.js:17 Artist RAnk #3 — Lil Wayne :: 4778 Unique Words
+app.js:17 Artist RAnk #4 — Kanye West :: 4557 Unique Words
+app.js:17 Artist RAnk #5 — Drake :: 4124 Unique Words
+app.js:20 ======== LYRICA RAW ANALYSIS RESULTS ========

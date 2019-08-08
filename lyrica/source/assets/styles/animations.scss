@@ -1,0 +1,41 @@
+@keyframes animate-card--show {
+  0% {
+    opacity: 0;
+    transform-origin: center;
+    transform: translateX(25%);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: center;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes animate-btn--hover {
+  0% {
+    border-color: #000;
+    color: #fff;
+    box-shadow: 0 0 0 #ff0;
+    text-shadow: 0 0 0 #ff0;
+  }
+  100% {
+    border-color: #ecc94b;
+    color: #fefcbf;
+    box-shadow: 0 0 32px #ff0;
+    text-shadow: 0 0 8px #ff0;
+  }
+}
+
+
+@keyframes animate-header--loading {
+  0% {
+    filter: blur(0) hue-rotate(0);
+  }
+  50% {
+    filter: blur(1px) hue-rotate(360deg);
+  }
+  100% {
+    filter: blur(0) hue-rotate(0);
+  }
+}
