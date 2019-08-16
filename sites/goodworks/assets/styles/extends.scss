@@ -1,0 +1,394 @@
+
+%global {
+
+  @apply bg-hero-diagonal-lines-white-10;
+  @apply bg-blue-900;
+  @apply py-8 px-10;
+  @apply textshadoow;
+  scroll-behavior: smooth;
+
+
+  @extend %custom_checkbox;
+
+  @screen tabletLg {
+    @apply py-8 px-16;
+  }
+
+}
+
+%background {
+  @apply w-percent100 h-percent50;
+  @apply custom-bg-field;
+}
+
+
+%status-message {
+  @apply text-blue-400 text-align-center mx-percent30 -mt-percent5;
+  border-top: 1px solid #63b3ed;
+}
+
+
+
+%slick-overrides {
+
+  .slick-dots {
+
+    @apply bottom-0 mb-percent2;
+
+    li {
+
+      @apply custom-slick-li;
+
+      button {
+
+        @apply custom-slick-li-button;
+
+        &:before {
+          @apply custom-slick-li-button-before;
+          color: #fff !important;
+        }
+
+      }
+
+    }
+
+  }
+
+  .slick-prev {
+    @apply w-basex7 h-basex7;
+    text-shadow: 2px 2px 1px #008dff;
+    &:before { @apply text-basex7; }
+  }
+
+  .slick-next {
+    @apply w-basex7 h-basex7;
+    text-shadow: 2px 2px 1px #008dff;
+    &:before { @apply text-basex7; }
+  }
+
+}
+
+
+
+
+%custom_checkbox {
+
+  .custom_checkbox {
+
+    @apply flex items-center;
+
+    .custom_checkbox__wrapper {
+      @apply bg-white shadow w-6 h-6 p-1 flex justify-center items-center mr-2;
+      input { @apply hidden; }
+      input:checked + svg { display: block !important; }
+      span { @apply select-none; }
+      @extend %custom_checkbox_svg;
+    }
+
+  }
+
+}
+
+
+
+
+%custom_checkbox_svg {
+
+  svg {
+    @apply hidden w-4 h-4 text-green-600 pointer-events-none;
+    g { @apply custom-checkbox-group; }
+    path {
+       &:first-child { fill: #008dff; }
+       &:last-child { fill: white; }
+    }
+  }
+
+}
+
+
+
+
+%header {
+
+  @apply text-white;
+  @apply w-percent100;
+  @screen tabletLg {
+    @apply flex flex-row items-start justify-start;
+  }
+
+}
+
+
+
+
+%header__info {
+
+  @apply mb-percent10;
+  @apply inline-block w-percent100;
+	@screen tabletLg {
+		@apply w-percent80;
+  }
+
+  h1 {
+    @extend %header__info__hero;
+  }
+
+  p {
+    @extend %header__info__details;
+  }
+
+}
+
+
+
+
+%header__info__hero {
+
+  @apply font-allstate1 font-weightBook leading-snug uppercase;
+  @apply mb-percent5;
+
+  @screen mobile {
+    @apply text-header leading-tight;
+  }
+
+  @screen tabletLg {
+    @apply leading-none;
+  }
+
+}
+
+
+
+
+%header__info__details {
+
+  @apply font-allstate2 font-weightRegular leading-tight;
+  @apply mb-percent2;
+
+  @screen mobile {
+    @apply text-subheader leading-normal;
+  }
+
+}
+
+
+
+
+%header__logos {
+
+  @apply w-percent100 px-percent20 mb-percent15;
+  @apply inline-flex flex-col items-center content-center justify-center;
+
+	@screen tabletLg {
+		@apply w-percent20 mb-0 px-0;
+  }
+
+  #brand_logos {
+    @apply w-percent100 mb-percent5;
+    #brand_logos__lockup {}
+  }
+
+  #social_logos {
+
+    @apply w-percent100 flex flex-row items-center justify-center;
+
+    #social_logos__fb, #social_logos__tw  {
+      @apply w-percent15 mx-percent2 cursor-pointer;
+      &:hover { @apply glow; }
+    }
+
+  }
+
+}
+
+
+
+
+%footer__nav {
+
+  @apply flex flex-row flex-wrap justify-evenly items-start;
+  @apply mt-percent5 mb-percent10 pt-percent5;
+  @apply footer-border;
+
+  .footer__nav_link {
+    @extend %footer__nav_link;
+  }
+
+}
+
+
+
+
+%footer__nav_link {
+
+  @apply text-white text-center font-normal;
+  @apply w-percent100 my-percent2;
+
+  &:hover {
+    @apply text-blue-400;
+  }
+
+  @screen tabletLg {
+     @apply w-percent15 mx-percent1 font-thin;
+  }
+
+}
+
+
+
+
+%athlete_card {
+
+  @apply inline-block opacity-0;
+  @apply mx-percent12 my-percent5;
+
+  @screen tabletLg {
+    @apply my-percent5;
+  }
+
+  @screen tabletLg {
+    @apply max-w-percent25 mx-percent2;
+  }
+
+  @screen laptopMd {
+    @apply max-w-percent20 mx-percent2;
+  }
+
+  &:hover {
+
+    @apply cursor-pointer;
+
+    .athlete_image {
+      @apply phase-shift;
+    }
+
+    .athlete__bio_btn {
+      @apply w-percent100;
+      @include animate(animate-btn--show, $animate-duration-8x, 0, 1, $ease-in-out, normal, forwards, running);
+    }
+
+  }
+
+  &:not(:hover) {
+
+    .athlete__bio_btn {
+      @include animate(animate-btn--hide, $animate-duration-8x, 0, 1, $ease-in-out, normal, forwards, running);
+    }
+
+  }
+
+  @include animate(animate-card--show, $animate-duration-2x, 250ms, 1, $ease-in-out, normal, forwards, running);
+
+  .card-content {
+
+    @apply border-l border-r border-b border-blue-400;
+    @apply text-white;
+
+  }
+
+}
+
+
+
+
+%athlete_image {
+  @apply ease-out-back-allx2;
+}
+
+
+
+
+%athlete__bio_btn {
+  @apply absolute inset-0 opacity-0
+}
+
+
+
+
+%athlete_name {
+
+  @apply font-allstate2 font-weightRegular leading-tight whitespace-no-wrap;
+  @apply uppercase;
+  @apply mb-1;
+
+  @screen mobile {
+    @apply text-athleteName;
+  }
+
+}
+
+
+
+
+%athlete_school {
+
+  @apply text-blue-400 font-allstate1 font-weightBold leading-loose whitespace-no-wrap;
+  @apply border-t border-b border-blue-400;
+  @apply mb-5;
+
+  @screen mobile {
+    @apply text-athleteSchool;
+  }
+
+}
+
+
+
+
+%athlete_meta_position {
+
+  @apply border-r-2 border-blue-400;
+  @apply w-percent50;
+  @apply text-center;
+  .athlete_meta_position--caption {
+    @apply font-allstate1 font-weightRegular leading-tight;
+    @screen mobile {
+      @apply text-athleteMetaCaption;
+    }
+  }
+  .athlete_meta_position--value {
+    @apply font-allstate1 font-weightRegular leading-tight;
+    @screen mobile {
+      @apply text-captionVote;
+    }
+  }
+
+}
+
+
+
+
+%athlete_meta_year {
+
+  @apply w-percent45;
+  @apply text-center;
+  .athlete_meta_year--caption {
+    @apply font-allstate1 font-weightRegular leading-tight;
+    @screen mobile {
+      @apply text-athleteMetaCaption;
+    }
+  }
+  .athlete_meta_year--value {
+    @apply font-allstate1 font-weightRegular leading-tight;
+    @screen mobile {
+      @apply text-captionVote;
+    }
+  }
+
+}
+
+
+
+
+%athlete_vote {
+
+  @apply bg-hero-diagonal-lines-blue-50;
+  @apply flex items-center justify-evenly;
+  @apply inset-x-0 bottom-0;
+  @apply p-5;
+
+  @screen mobile {
+    @apply text-captionVote;
+  }
+
+}

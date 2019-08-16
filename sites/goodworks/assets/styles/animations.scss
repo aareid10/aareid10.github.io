@@ -1,0 +1,40 @@
+@keyframes animate-card--show {
+  0% {
+    opacity: 0;
+    transform-origin: center;
+    transform: translateY(25%);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: center;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes animate-btn--show {
+  0% {
+    opacity: 0;
+    transform-origin: center;
+    transform: translateY(12.5%);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: center;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes animate-btn--hide {
+  0% {
+    opacity: 1;
+    transform-origin: center;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform-origin: center;
+    transform: translateY(12.5%);
+  }
+}

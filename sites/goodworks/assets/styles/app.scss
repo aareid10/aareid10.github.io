@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'fonts';
+@import 'vars';
+@import 'utilities';
+@import 'animations';
+@import 'mixins';
+@import 'extends';
+@import './modal.scss';
+@import '../../node_modules/slick-carousel/slick/slick.css';
+@import '../../node_modules/slick-carousel/slick/slick-theme.css';
+
+
+body {
+
+  @extend %global;
+
+  #background { @extend %background }
+
+  header#gwt_header {
+
+    @extend %header;
+
+    section#gwt_header__info { @extend %header__info; }
+
+    section#gwt_header__logos { @extend %header__logos; }
+
+  }
+
+
+  main {
+
+    @apply flex flex-col justify-center pb-percent15;
+
+    @screen tabletLg {
+      @apply flex-row flex-wrap items-start pb-0;
+    }
+
+    .status-message { @extend %status-message; }
+
+    @extend %slick-overrides;
+
+    .card {
+
+      @extend %athlete_card;
+
+      .athlete_image { @extend %athlete_image; }
+
+      .athlete__bio_btn { @extend %athlete__bio_btn; }
+
+      .athlete_details {
+
+        @apply p-2;
+
+        .athlete_name { @extend %athlete_name; }
+
+        .athlete_school { @extend %athlete_school; }
+
+        .athlete_meta {
+
+          @apply flex flex-row;
+
+          @apply mb-2;
+
+          span { @apply block; }
+
+          .athlete_meta_position { @extend %athlete_meta_position; }
+
+          .athlete_meta_year { @extend %athlete_meta_year; }
+
+        }
+
+      }
+
+      .athlete_vote { @extend %athlete_vote; }
+
+    }
+
+  }
+
+
+  footer#gwt_footer {
+
+    @apply my-percent10;
+
+    section#gwt_footer__nav { @extend %footer__nav; }
+
+  }
+
+}

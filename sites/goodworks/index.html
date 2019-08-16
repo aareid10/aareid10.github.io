@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> DEVELOPMENT | AllState Goodworks Team | 2019 </title>
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="http://a.espncdn.com/favicon.ico">
+    <link rel="shortcut icon" href="http://a.espncdn.com/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="canonical" href="http://espncreativeworks.com/users/reid/allstate/dist">
+
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta property="og:url" content="http://espncreativeworks.com/users/reid/allstate/dist">
+    <meta property="og:site_name" content='Allstate AFCA Good Works Team&reg;'>
+    <meta property="og:title" content='Allstate AFCA Good Works Team&reg;'>
+    <meta property="og:description" content="Vote for the 2018 Allstate AFCA Good Works Team&reg; honoring student athletes making a difference in their communities! #GoodWorksTeam http://espncreativeworks.com/users/reid/allstate/dist">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://secure.espncdn.com/promotions/bsa/apps/allstate/2018/images/fb_200x200_2xRetina.jpg">
+    <meta property="og:image:width" content="250">
+    <meta property="og:image:height" content="250">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@espn">
+    <meta name="twitter:domain" content="promo.espn.go.com">
+    <meta name="twitter:creator" content="@espn">
+    <meta name="twitter:title" content="Allstate AFCA Good Works Team&reg;">
+    <meta name="twitter:description" content="Vote for the 2018 Allstate AFCA Good Works Team&reg; honoring student athletes making a difference in their communities! #GoodWorksTeam http://espncreativeworks.com/users/reid/allstate/dist">
+    <meta name="twitter:image" content="https://secure.espncdn.com/promotions/bsa/apps/allstate/2018/images/fb_200x200_2xRetina.jpg">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38720475-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-38720475-4');
+    </script>
+
+    <link rel="stylesheet" href="/assets/styles/app.scss">
+
+  </head>
+
+  <body>
+
+    <div id="background"></div>
+
+    <div class="container mx-auto">
+
+      <header id="gwt_header">
+        <section id="gwt_header__info">
+          <h1 class="text-header-fluid">Vote now for the captain of the <br/>2019 Allstate AFCA Good Works Team</h1>
+          <p class="text-subheader-fluid">Help Allstate and the AFCA celebrate these student-athletes by casting your vote for the 2019 Allstate AFCA Good Works Team&reg; Captain. Click on each member's image to learn more, and to vote.</p>
+          <p class="text-subheader-fluid">When the college football community comes together, good things happen.</p>
+        </section>
+        <section id="gwt_header__logos">
+          <div id="brand_logos">
+            <img id="brand_logos__lockup" class="" src="https://secure.espncdn.com/promotions/bsa/2019/apps/allstate/goodworks/images/allstate_logo_lockup.png" alt="">
+          </div>
+          <div id="social_logos">
+            <img id="social_logos__fb"  src="https://secure.espncdn.com/promotions/bsa/2019/apps/allstate/goodworks/images/icon_social_fb.png" alt="">
+            <img id="social_logos__tw"  src="https://secure.espncdn.com/promotions/bsa/2019/apps/allstate/goodworks/images/icon_social_tw.png" alt="">
+          </div>
+        </section>
+      </header>
+
+
+      <main id="gwt_content">
+
+        <!-- Athlete Markup: Start -->
+        <template id="athlete_card">
+          <section class="card">
+            <img class="athlete_image" src="https://secure.espncdn.com/promotions/bsa/2019/apps/allstate/goodworks/images/athletes/Caleb-Kelly.jpg">
+            <img class="athlete__bio_btn" data-micromodal-trigger="athlete-modal" src="https://secure.espncdn.com/promotions/bsa/2019/apps/allstate/goodworks/images/bio_overlay.png">
+            <section class="card-content">
+              <section class="athlete_details">
+                <p class="athlete_name text-athleteName-fluid">Caleb Kelly</p>
+                <p class="athlete_school text-schoolName-fluid">University of Nebraska</p>
+                <div class="athlete_meta">
+                  <span class="athlete_meta_position">
+                      <p class="athlete_meta_position--caption text-metadataCaption-fluid">Position:</p>
+                      <p class="athlete_meta_position--value text-metadataValue-fluid">DL</p>
+                  </span>
+                  <span class="athlete_meta_year">
+                      <p class="athlete_meta_year--caption text-metadataCaption-fluid">Year:</p>
+                      <p class="athlete_meta_year--value text-metadataValue-fluid">Senior</p>
+                  </span>
+                </div>
+              </section>
+              <section class="athlete_vote">
+                <label class="custom_checkbox">
+                  <div class="custom_checkbox__wrapper">
+                    <input type="checkbox">
+                    <svg viewBox="0 0 172 172">
+                        <g>
+                          <path d="M0 172V0h172v172z"/>
+                          <path d="M145.433 37.933L64.5 118.8658 33.7337 88.0996l-10.134 10.1341L64.5 139.1341l91.067-91.067z"/>
+                        </g>
+                    </svg>
+                  </div>
+                  <span class="text-captionVote-fluid">Vote for athlete</span>
+                </label>
+              </section>
+            </section>
+          </section>
+        </template>
+        <!-- Athlete Markup: End -->
+
+      </main>
+
+
+      <!-- Modal Markup: Start -->
+        <div class="modal micromodal-slide" id="athlete-modal" aria-hidden="true">
+          <div id="modal__overlay" tabindex="-1" data-micromodal-close="">
+            <div id="modal__container" class="container mx-auto" role="dialog" aria-modal="true" aria-labelledby="athlete-modal-title">
+              <button id="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+              <header id="modal__header">
+                <img id="athlete_image" src="https://secure.espncdn.com/promotions/bsa/2019/apps/allstate/goodworks/images/athletes/Caleb-Kelly.jpg">
+              </header>
+              <div id="modal__content">
+                <p id="athlete_name" class="text-athleteName-fluid">Caleb Kelly</p>
+                <p id="athlete_school" class="text-schoolName-fluid">University of Nebraska</p>
+                <div id="athlete_meta">
+                  <span id="athlete_meta_position">
+                    <p id="athlete_meta_position--caption" class="text-modalMetadataCaption-fluid">Position:</p>
+                    <p id="athlete_meta_position--value" class="text-modalMetadataValue-fluid">DL</p>
+                  </span>
+                  <span id="athlete_meta_year">
+                    <p id="athlete_meta_year--caption" class="text-modalMetadataCaption-fluid">Year:</p>
+                    <p id="athlete_meta_year--value" class="text-modalMetadataValue-fluid">Senior</p>
+                  </span>
+                  <span id="social_logos">
+                    <p id="athlete_meta_share--caption" class="text-modalMetadataCaption-fluid">Share:</p>
+                    <div id="social_logos__container">
+                      <img id="social_logos__fb" src="https://secure.espncdn.com/promotions/bsa/2019/apps/allstate/goodworks/images/icon_social_fb.png" alt="">
+                      <img id="social_logos__tw" src="https://secure.espncdn.com/promotions/bsa/2019/apps/allstate/goodworks/images/icon_social_tw.png" alt="">
+                    </div>
+                  </span>
+                </div>
+                <div id="modal_bio">
+                  <div id="modal_bio_screen" class="text-modalCopy-fluid"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- Modal Markup: End -->
+
+
+      <footer id="gwt_footer">
+        <section id="gwt_footer__nav" class="text-footer-fluid">
+          <a class="footer__nav_link" href="https://disneytermsofuse.com/" target="_blank" data-event data-category="Navigation" data-action="click" data-label="Terms of Use">Terms of Use</a>
+          <a class="footer__nav_link" href="https://privacy.thewaltdisneycompany.com/en/" target="_blank" data-event data-category="Navigation" data-action="click" data-label="Privacy Policy">Privacy Policy</a>
+          <a class="footer__nav_link" href="https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/your-california-privacy-rights/" target="_blank" data-event data-category="Navigation" data-action="click" data-label="Your California Privacy Rights">Your California Privacy Rights</a>
+          <a class="footer__nav_link" href="https://privacy.thewaltdisneycompany.com/en/for-parents/childrens-online-privacy-policy/" target="_blank" data-event data-category="Navigation" data-action="click" data-label="Children&apos;s Online Privacy Policy">Children&apos;s Online Privacy Policy</a>
+          <a class="footer__nav_link" href="http://preferences-mgr.truste.com/?type=espn&affiliateId=148" target="_blank" data-event data-category="Navigation" data-action="click" data-label="Interest-Based Ads">Interest-Based Ads</a>
+        </section>
+      </footer>
+
+    <script src="./assets/scripts/modules/app.js" charset="utf-8"></script>
+    <script src="./tailwind.config.js" charset="utf-8"></script>
+
+  </body>
+
+</html>

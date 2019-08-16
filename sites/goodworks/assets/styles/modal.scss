@@ -1,0 +1,236 @@
+/**************************\
+  Basic Modal Styles
+\**************************/
+
+.modal.is-open { @apply block; }
+
+.modal { @apply hidden; }
+
+
+
+/**************************\
+  Animation Styles
+\**************************/
+
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+  from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}
+
+
+
+
+
+
+/**************************\
+  Custom Modal Styles
+\**************************/
+
+
+#modal__overlay {
+  @apply fixed inset-0;
+  @apply flex content-center items-center;
+  background: rgba(0,0,0,0.6);
+}
+
+
+
+
+
+
+#modal__container {
+  @apply bg-hero-diagonal-lines-white-15 bg-blue-900;
+  @apply w-percent80 h-percent75 mx-auto rounded;
+  @apply border border-white text-white overflow-hidden;
+  @apply flex flex-col justify-start relative;
+  box-sizing: border-box;
+
+  @screen mobile {
+    @apply h-percent70;
+  }
+
+  @screen tabletLg {
+    @apply h-percent65;
+    @apply flex-row;
+  }
+
+
+  #modal__close {
+    @apply absolute z-10 top-0 right-0 mx-basex4;
+    @apply border-0 bg-transparent;
+
+    &:focus { outline:none; }
+
+    &:before {
+      content: "✕";
+      @apply font-sans textshadoow text-white text-basex6;
+      @screen tabletLg {
+        font-size: calc(18px + (22 - 18) * (100vw - 330px) / (2560-330) );
+      }
+    }
+
+    @screen tabletLg {
+      @apply mt-0;
+    }
+
+  }
+
+
+
+  #modal__header {
+    @apply flex flex-col justify-start;
+    @apply inset-0 overflow-hidden w-percent100 pb-percent55;
+
+    @screen tabletLg {
+      @apply w-percent70 ;
+    }
+
+    #athlete_image {
+      @apply w-percent100;
+
+      @screen tabletLg {
+        @apply w-percent130 max-w-percent130 -ml-percent15;
+      }
+    }
+
+  }
+
+
+
+  #modal__content {
+    @apply p-percent5;
+
+    @screen tabletLg {
+      @apply w-percent55;
+    }
+
+    @screen tabletLg {
+      @apply p-percent2;
+    }
+
+    #athlete_name {
+      @apply leading-none uppercase;
+    }
+
+    #athlete_school {
+      @apply text-blue-400 mb-percent2;
+    }
+
+    #athlete_meta {
+      @apply flex flex-row justify-start mb-percent2;
+      @apply border-t-2 border-b-2 border-blue-400;
+    }
+
+    #athlete_meta_position, #athlete_meta_year {
+      @apply border-r-2 border-blue-400;
+      @apply w-percent25 my-basex4;
+      @apply flex flex-col flex-wrap justify-start items-center;
+
+      #athlete_meta_position--value, #athlete_meta_year--value {
+        @apply font-medium;
+      }
+    }
+
+    #social_logos {
+      @apply flex flex-row flex-wrap justify-center items-center text-center;
+      @apply w-percent50 mt-basex2 mb-basex4 px-percent5;
+
+      #athlete_meta_share--caption {
+        @apply w-percent100;
+      }
+
+      #social_logos__container {
+        @apply w-percent75 flex flex-row flex-wrap justify-center items-center;
+
+        @screen tabletLg {
+          @apply flex-no-wrap;
+        }
+
+        #social_logos__fb, #social_logos__tw {
+          @apply w-percent25 my-percent2 mx-percent5;
+          &:hover { @apply glow; }
+
+          @screen tabletLg {
+            @apply w-percent35 justify-around mx-percent15;
+          }
+
+        }
+
+      }
+
+    }
+
+    #modal_bio {
+      @apply overflow-hidden w-percent100 h-percent40;
+
+      @screen tabletLg {
+        @apply h-percent75;
+      }
+
+      #modal_bio_screen {
+        @apply overflow-y-scroll max-h-percent85 w-percent110;
+        @apply pt-percent2 pb-percent10 pr-percent5 leading-relaxed;
+        scroll-behavior: smooth;
+
+        @screen mobile {
+          @apply text-white font-hairline modal-scrim;
+          @apply max-h-percent65 mt-percent1;
+          @apply pt-percent2 pb-percent5 pl-percent2 pr-percent10;
+        }
+
+        @screen tabletLg {
+          @apply max-h-percent95;
+          @apply pt-0 pb-percent10;
+        }
+
+      }
+
+    }
+
+  }
+
+}

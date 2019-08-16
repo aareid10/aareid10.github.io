@@ -1,0 +1,84 @@
+.textshadoow {
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.glow {
+  filter: contrast(150%) brightness(1);
+}
+
+.phase-shift {
+  filter: contrast(150%) brightness(1) grayscale(0.75);
+}
+
+.modal-scrim {
+  background: linear-gradient(90deg, rgba(0,141,255,0.1), transparent);
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.ease-out-back-allx1 {
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+}
+
+.ease-in-out-allx1 {
+  transition: all 0.8s ccubic-bezier(0.645, 0.045, 0.355, 1)
+}
+
+.ease-out-back-allx2 {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+}
+
+.ease-in-out-allx2 {
+  transition: all 0.4s ccubic-bezier(0.645, 0.045, 0.355, 1)
+}
+
+.footer-border {
+  border-top: 1px solid #fff;
+  box-shadow: 0px -4px 0px rgba(0, 141, 255, .5);
+  background: linear-gradient(180deg, rgba(0,141,255,0.075), transparent);
+}
+
+.custom-slick-li {
+  width: 8px;
+  height: 8px;
+  margin: 0px 2px;
+}
+
+.custom-slick-li-button {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-slick-li-button-before {
+  font-size: 8px;
+  line-height: 8px;
+  width: 8px;
+  height: 8px;
+}
+
+.custom-checkbox-group {
+  fill: none;
+  stroke-width: unset;
+  stroke-miterlimit: 10;
+  font-family: none;
+  font-weight: unset;
+  font-size: unset;
+  text-anchor: unset;
+  mix-blend-mode: normal;
+}
+
+.custom-bg-field {
+  left: 0;
+  bottom: 0;
+  z-index: -100;
+  position: fixed;
+  background: url('https://secure.espncdn.com/promotions/bsa/2019/apps/allstate/goodworks/images/field-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
