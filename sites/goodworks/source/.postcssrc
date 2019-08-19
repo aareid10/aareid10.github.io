@@ -1,0 +1,39 @@
+{
+  "modules": false,
+  "plugins": {
+    'postcss-font-awesome': {},
+    'rucksack-css': {
+      'hexrgba': true,
+      'fallbacks': true,
+      'autoprefixing': true
+    },
+    'tailwindcss': {},
+    'cssnano': {},
+    'postcss-purgecss': {
+       content: [
+         './index.html',
+       ],
+       whitelist: [
+         'slick-slider',
+         'slick-list',
+         'slick-slider',
+         'slick-track',
+         'slick-list',
+         'slick-slide',
+         'slick-arrow',
+         'slick-hidden',
+         'slick-dots',
+         'slick-prev',
+         'slick-next',
+         'slick-prev:before',
+         'slick-next:before',
+         'status-message',
+         'is-open',
+         'li',
+         'button',
+         'button:before',
+         ':before',
+       ],
+    }
+  }
+}

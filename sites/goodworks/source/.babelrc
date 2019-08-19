@@ -1,0 +1,25 @@
+{
+  "presets": ["@babel/preset-env"],
+  "env": {
+    "test": {
+      "presets": ["@babel/preset-env"]
+    }
+  },
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "@tests": "./__tests__",
+        "@mocks": "./__mocks__",
+        "@data": "./assets/scripts/data",
+        "@states": "./assets/scripts/states",
+        "@modules": "./assets/scripts/modules",
+        "@classes": "./assets/scripts/classes",
+        "@components": "./assets/scripts/components"
+      }
+    }],
+    ["@babel/plugin-transform-runtime", {
+     "corejs": 2
+   }]
+  ]
+}

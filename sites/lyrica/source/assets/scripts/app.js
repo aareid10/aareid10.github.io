@@ -39,6 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#trigger__primaryartists').addEventListener('click', () => {
       global.addEventListener('signal--analysis--primaryArtist-complete', () => {
         Lyrica.renderResults("primarySections")
+        document.querySelector('#trigger__primaryartists').remove()
       })
       Lyrica.Analyser.lyricalAnalysisA(Lyrica.Parser.data)
     })
@@ -52,6 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#trigger__actualartists').addEventListener('click', () => {
       global.addEventListener('signal--analysis--actualArtist-complete', () => {
         Lyrica.renderResults("anySections")
+        document.querySelector('#trigger__actualartists').remove()
       })
       Lyrica.Analyser.lyricalAnalysisB(Lyrica.Parser.data)
     })
@@ -65,6 +67,7 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#trigger__uniquewords').addEventListener('click', () => {
       global.addEventListener('signal--analysis--uniqueWords-complete', () => {
         Lyrica.renderResults("uniqueWords")
+        document.querySelector('#trigger__uniquewords').remove()
       })
       Lyrica.Analyser.lyricalAnalysisC(Lyrica.Parser.data)
       logAnalysis()

@@ -1,0 +1,6 @@
+{
+  "plugins": {
+  'posthtml-hint': {},
+  'posthtml-tidy': {}
+  }
+}
