@@ -1,0 +1,25 @@
+{
+  "name": "aareid10.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@actions/core": "^1.1.1",
+    "@actions/github": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aareid10/aareid10.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aareid10/aareid10.github.io/issues"
+  },
+  "homepage": "https://github.com/aareid10/aareid10.github.io#readme"
+}
