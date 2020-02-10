@@ -1,0 +1,61 @@
+@keyframes animate-open {
+  0% {
+    opacity: 0;
+  }
+ 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate-close {
+  0% {
+    opacity: 1;
+  }
+ 100% {
+   opacity: 0;
+  }
+}
+
+@keyframes animate-reset {
+  0% {
+    opacity: 1;
+  }
+ 50% {
+   opacity: 0;
+  }
+ 100% {
+  opacity: 1;
+ }
+}
+
+
+@keyframes animate-flare {
+  0% {
+    filter: scale(1) contrast(1) drop-shadow(0px 0px 0px #FFF);
+  }
+ 50% {
+   filter: scale(1.05) contrast(5) drop-shadow(0px 0px 5px #FFF);
+  }
+  100% {
+    filter: scale(1) contrast(1) drop-shadow(0px 0px 0px #FFF);
+   }
+}
+
+
+@keyframes animate-pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    filter: 'blur(0px)';
+  }
+ 50% {
+   opacity: 0;
+   transform: scale(1.05);
+   filter: 'blur(1px)';
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: 'blur(0px)';
+  }
+}

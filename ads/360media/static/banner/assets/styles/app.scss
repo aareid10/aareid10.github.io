@@ -1,0 +1,30 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+@import 'vars.scss';
+@import 'mixins.scss';
+@import 'animations.scss';
+@import 'extends.scss';
+@import 'utilities.scss';
+
+
+html, body {
+ @extend %lib__reset;
+ @extend %lib__base;
+ @extend %lib__panolens;
+ font-family: 'Bebas Neue', cursive;
+}
+
+
+body {
+  &.billboard-ad { @extend %ad__Billboard; }
+  &.vertical-ad { @extend %ad__Vertical; }
+  .panolens-infospot { @extend %panorama__infospot; }
+  #ad-panorama-logo { @extend %panorama__logo; }
+  #ad-panorama-title {  @extend %panorama__title; }
+  #ad-panorama-tour-trigger { @extend %panorama__tour_trigger; }
+  #ad-panorama-tour-guide { @extend %paonama__tour_guide; }
+  #ad-panorama-progress { @extend %panorama__progress; }
+  footer { @extend %panorama__deadzone; }
+}

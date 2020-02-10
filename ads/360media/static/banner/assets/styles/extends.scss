@@ -1,0 +1,258 @@
+
+%lib__reset {
+  * {
+    box-sizing: border-box;
+  }
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+  	font-size: 100%;
+  	font: inherit;
+  	vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+  	display: block;
+  }
+  body {
+  	line-height: 1;
+  }
+  ol, ul {
+  	list-style: none;
+  }
+  blockquote, q {
+  	quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+  	content: '';
+  	content: none;
+  }
+  table {
+  	border-collapse: collapse;
+  	border-spacing: 0;
+  }
+}
+
+%lib__base {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+%lib__panolens {
+  #panolens-separate-container:-webkit-full-screen{
+   left: 0;
+   top: 0;
+  }
+  #panolens-separate-container:-moz-full-screen{
+   left: 0;
+   top: 0;
+  }
+  #panolens-separate-container:-ms-fullscreen{
+   left: 0;
+   top: 0;
+  }
+  #panolens-separate-container:fullscreen {
+   left: 0;
+   top: 0;
+  }
+}
+
+
+
+
+%ad__Billboard {
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  width: 970px;
+  height: 250px;
+  #ad-panorama-logo {
+    height: 30%;
+    top: 67.2%;
+    left: 2%;
+  }
+}
+
+%ad__Vertical {
+  position: relative;
+  min-width: $width-banner--min;
+  min-height: $height-banner--min;
+  max-width: $width-banner--max;
+  max-height: $height-banner--max;
+  overflow: hidden;
+  height: 680px;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  #ad-panorama-logo {
+    height: 15%;
+    top: 83%;
+    left: 4%;
+  }
+  &.xl {
+    height: $height-banner--max;
+    width: $width-banner--max;
+    #ad-panorama-logo {
+      height: 15%;
+      top: 82.5%;
+      left: 10%;
+    }
+  }
+}
+
+
+
+
+%panorama__logo {
+  position: absolute;
+  opacity: 0;
+  z-index: 5;
+  filter: drop-shadow(1px 1px 0px #ffffffcc);
+  @include animate_stack(animate-open, animate-flare, 2s, 2s, 3s, 10s, 1, infinite, $ease-in-out, $ease-in-out, running, forwards, normal);
+}
+
+%panorama__title {
+  top: 0;
+  right: 20%;
+  height: 33px;
+  width: 60%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  color: #fff;
+  background: rgba(255, 0, 0, 1);
+  font-size: .85rem;
+  font-family: 'Bebas Neue', cursive;
+  filter: drop-shadow(0 1px 20px rgba(255, 0, 0, 0.5));
+  @include animate(animate-open, 2s, 3s, 1, $ease-in-out, normal, forwards, running);
+  letter-spacing: 1.5px;
+  border-top: 5px #eee solid;
+  span:after {
+    content: "";
+    letter-spacing: 2px;
+    border-bottom: 4px white solid;
+    position: relative;
+    width: 80%;
+    margin: 10px auto 0;
+  }
+}
+
+%panorama__progress {
+  width: 0;
+  height: 5px;
+  position: fixed;
+  top: 0;
+  background: #f44336;
+  -webkit-transition: opacity 2.5s ease;
+  transition: opacity 2.5s ease;
+  &.finish {
+    opacity: 0;
+  }
+}
+
+%panorama__infospot {
+
+  transform: translate(-200px, 200px);
+  position: absolute;
+  display: none;
+  top: 0px;
+
+  &.panel {
+    max-width: 500px;
+    max-height: 500px;
+    min-width: 200px;
+    min-height: 250px;
+    background: #fff;
+    color: #000;
+    border-radius: 3px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    iframe {
+      border: none;
+      width:100%;
+    }
+
+    .title {
+      font-size: 1.5em;
+      text-align: center;
+      padding: 5px;
+    }
+
+    .text {
+      padding: 0 20px 20px 20px;
+    }
+
+  }
+
+}
+
+%panorama__tour_trigger {
+  position: absolute;
+  width: 7.5%;
+  opacity: 0;
+  left: 47%;
+  top: 8%;
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 0px #ffffffcc);
+  @include animate(animate-open, 2s, 3s, 1, $ease-in-out, normal, forwards, running);
+  &.running {
+    @include animate(animate-close, 2s, 0s, 1, $ease-in-out, normal, forwards, running);
+  }
+}
+
+%paonama__tour_guide {
+
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  pointer-events: none;
+
+  #typed {
+    color: #fff;
+    text-shadow: 0px 0px 2px #000;
+    font-size: 18px;
+    letter-spacing: .75px;
+  }
+
+}
+
+%panorama__deadzone {
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 30%;
+    width: 100%;
+    background: linear-gradient(0deg,#000,transparent);
+    border-bottom: 5px solid red;
+    bottom: 0;
+    z-index: 4;
+  }
+}
