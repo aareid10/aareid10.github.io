@@ -69,6 +69,7 @@
  },
  "dependencies": {
   "@vimeo/player": "^2.10.0",
+  "parcel": "^1.12.4",
   "preact": "^8.4.2",
   "react": "^16.8.6",
   "react-dom": "^16.8.6",
@@ -85,6 +86,7 @@
   "@babel/preset-env": "^7.4.4",
   "@babel/preset-react": "^7.0.0",
   "babel-jest": "^24.1.0",
+  "babel-plugin-module-resolver": "^3.2.0",
   "cssnano": "^4.1.10",
   "eslint": "^5.3.0",
   "eslint-config-airbnb": "^17.1.0",

@@ -7,6 +7,27 @@
   }
 }
 
+@keyframes animate-generic--close {
+  0% {
+    opacity: 1;
+  }
+ 100% {
+   opacity: 0;
+  }
+}
+
+@keyframes animate-generic--reset {
+  0% {
+    opacity: 1;
+  }
+ 50% {
+   opacity: 0;
+  }
+ 100% {
+  opacity: 1;
+ }
+}
+
 @keyframes animate-panel--open-top {
   0% {
     opacity: 0;

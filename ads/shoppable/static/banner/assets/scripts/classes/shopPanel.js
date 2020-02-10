@@ -1,4 +1,4 @@
-import StateGlobal from '../states/state.global';
+import StateGlobal from '@states/state.global';
 
 export default class ShopPanel {
   /**

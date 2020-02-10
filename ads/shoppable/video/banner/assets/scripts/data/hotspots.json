@@ -10,14 +10,14 @@
 			"pulseRate": 500,
 			"id": "hspt1",
 			"item": "product_sweater.jpg",
-			"image": "https://raw.githubusercontent.com/aareid10/aareid10.github.io/master/shoppable/video/banner/assets/media/imgs/product_separates.jpg",
+			"image": "https://secure.espncdn.com/promotions/bsa/2019/templates/vertical-unit/shoppable/imgs/product_separates.jpg",
 			"url": "https://belk.com",
 			"polarity": "bot",
 			"styles": {
 				"top": "20%",
 				"left": "60%",
 				"animation-duration": "1500ms",
-				"background-image": "url('https://raw.githubusercontent.com/aareid10/aareid10.github.io/master/shoppable/video/banner/assets/media/imgs/pulse.png')",
+				"background-image": "url('https://secure.espncdn.com/promotions/bsa/2019/templates/vertical-unit/shoppable/imgs/pulse.png')",
 				"height": "35px",
 				"width": "35px",
 				"box-shadow": "0 0 35px white"
@@ -30,10 +30,10 @@
 			},
 			"lifecycle": [
 				{"inactive": 0},
-				{"active": 1500},
-				{"inactive": 12000},
-				{"active": 14000},
-				{"inactive": 30000}
+				{"active": 1},
+				{"inactive": 8},
+				{"active": 22},
+				{"inactive": 29}
 			]
 		},
 		{
@@ -41,7 +41,7 @@
 			"pulseRate": 550,
 			"id": "hspt2",
 			"item": "product_shoes.jpg",
-			"image": "https://raw.githubusercontent.com/aareid10/aareid10.github.io/master/shoppable/video/banner/assets/media/imgs/product_shoes.jpg",
+			"image": "https://secure.espncdn.com/promotions/bsa/2019/templates/vertical-unit/shoppable/imgs/product_shoes.jpg",
 			"url": "https://belk.com",
 			"polarity": "top",
 			"meta": {
@@ -54,17 +54,17 @@
 				"top": "80%",
 				"left": "57.5%",
 				"animation-duration": "1550ms",
-				"background-image": "url('https://raw.githubusercontent.com/aareid10/aareid10.github.io/master/shoppable/video/banner/assets/media/imgs/pulse.png')",
+				"background-image": "url('https://secure.espncdn.com/promotions/bsa/2019/templates/vertical-unit/shoppable/imgs/pulse.png')",
 				"height": "35px",
 				"width": "35px",
 				"box-shadow": "0 0 35px white"
 			},
 			"lifecycle": [
 				{"inactive": 0},
-				{"active": 1500},
-				{"inactive": 9000},
-				{"active": 22320},
-				{"inactive": 30000}
+				{"active": 1},
+				{"inactive": 5},
+				{"active": 24},
+				{"inactive": 27}
 			]
 		},
 		{
@@ -72,7 +72,7 @@
 			"pulseRate": 600,
 			"id": "hspt3",
 			"item": "product_pants.jpg",
-			"image": "https://raw.githubusercontent.com/aareid10/aareid10.github.io/master/shoppable/video/banner/assets/media/imgs/product_pants.jpg",
+			"image": "https://secure.espncdn.com/promotions/bsa/2019/templates/vertical-unit/shoppable/imgs/product_pants.jpg",
 			"url": "https://belk.com",
 			"polarity": "bot",
 			"meta": {
@@ -85,17 +85,17 @@
 				"top": "60%",
 				"left": "60%",
 				"animation-duration": "1600ms",
-				"background-image": "url('https://raw.githubusercontent.com/aareid10/aareid10.github.io/master/shoppable/video/banner/assets/media/imgs/pulse.png')",
+				"background-image": "url('https://secure.espncdn.com/promotions/bsa/2019/templates/vertical-unit/shoppable/imgs/pulse.png')",
 				"height": "35px",
 				"width": "35px",
 				"box-shadow": "0 0 35px white"
 			},
 			"lifecycle": [
 				{"inactive": 0},
-				{"active": 1500},
-				{"inactive": 11000},
-				{"active": 18000},
-				{"inactive": 30000}
+				{"active": 1},
+				{"inactive": 7},
+				{"active": 20},
+				{"inactive": 29}
 			]
 		}
 	]

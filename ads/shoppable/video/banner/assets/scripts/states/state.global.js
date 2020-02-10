@@ -12,7 +12,8 @@
 const global = {
   timing: {
     initDrawDelay: 1000,
-    cycleDelay: 2000,
+    initLoad: 2000,
+    cycleHotspotDelay: 1500,
     destinationDelay: 250,
     panelClickOutDelay: 500,
     panelDisplayDelay: 250,

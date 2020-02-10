@@ -2,6 +2,7 @@ $width-banner--min: 320px;
 $width-banner--max: 640px;
 $height-banner--min: 480px;
 $height-banner--max: 960px;
+$media-threshold: 440px;
 
 $color-white: #fff;
 $color-black: #000;
@@ -21,6 +22,8 @@ $animate-delay-logo--before: 1000ms;
 $animate-duration-panel: 400ms;
 $animate-duration-panel-image--opened: 500ms;
 $animate-duration-panel-image--closed: 2000ms;
+$animate-duration-player--opened: 500ms;
+$animate-duration-player--closed: 2000ms;
 
 
 $ease-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);

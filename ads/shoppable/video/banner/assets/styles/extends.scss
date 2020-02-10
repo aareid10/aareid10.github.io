@@ -2,89 +2,6 @@
 /* * * * * * * * *
  * PROFILES */
 
-
- %portfolio__version {
-
-   &.portfolio {
-     width: 100%;
-     height: 100%;
-     max-height: unset;
-   }
-
-  h1 {
-    font-family: 'Major Mono Display', monospace;
-    color: white;
-    max-width: 60%;
-    margin: 5% 0 5px;
-  }
-
-  h2 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-weight: 100;
-    font-size: 16px;
-    color: white;
-    max-width: 60%;
-    margin: 0 0 5%;
-    border-left: 2px solid white;
-    margin-left: 24px;
-    padding-left: 12px;
-  }
-
-  h3 {
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-family: Helvetica;
-    font-size: 8px;
-    font-weight: 100;
-    max-width: 60%;
-    margin: 0 0 -6px;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: baseline;
-    width: 100%;
-
-    span {
-      background: #908f8f;
-      padding: 6px 8px 4px;
-      margin: 0 1px;
-      display: inline-block;
-      &:first-child {
-        margin: 0 1px 0 -1px;
-      }
-      &:last-child {
-        margin: -1px 0 0 1px;
-      }
-    }
-  }
-
-  hr {
-    width: 60%;
-  }
-
-  #shopunit {
-    transform: scale(.75) translateY(-14%);
-    max-height: unset;
-
-    #shop__components {
-      max-height: unset;
-      #shop__panel {}
-    }
-  }
-
-  main {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 60%;
-    width: 60%;
-  }
-
- }
-
 %vertical__display {
   position: relative;
   width: 100%;
@@ -187,6 +104,12 @@
   width: 100%;
   left: 0;
   top: 0;
+
+  /* Internal Media Query */
+  @media screen and (max-width:$media-threshold) {
+    margin-top: 50%;
+    height: 60%;
+  }
 }
 
 %shop__hotspot {
@@ -194,8 +117,7 @@
   height: 50px;
   border-radius: 50px;
   background: $color-hotspot;
-  background: url('https://raw.githubusercontent.com/aareid10/aareid10.github.io/master/shoppable/video/banner/assets/media/imgs/hotspot.png');
-  @include animate(animate-hotspot-pulse, 2000ms, infinite, $ease-in-out, normal, forwards, running);
+  background: url('https://secure.espncdn.com/promotions/bsa/2019/templates/vertical-unit/shoppable/imgs/hotspot.png');
   transition: all $ease-in-out;
   background-size: 100%;
   transform-origin: 50% 50%;
@@ -207,6 +129,15 @@
   z-index: 100;
   top: 100px;
   display: 'block';
+  &.shop__hotspot--loading {
+    @include animate(animate-generic--open, 2000ms, 1, $ease-in-out, normal, forwards, running);
+  }
+  &.shop__hotspot--unloading {
+    @include animate(animate-generic--close, 2000ms, 1, $ease-in-out, normal, forwards, running);
+  }
+  &.shop__hotspot--ready {
+    @include animate(animate-hotspot-pulse, 2000ms, infinite, $ease-in-out, normal, forwards, running);
+  }
 }
 
 %shop__panel {
@@ -284,11 +215,15 @@
     @include animate(animate-panel--close-bottom, $animate-duration-panel, 1, $ease-in-out, normal, forwards, running);
   }
 
+  /* Internal Media Query */
+  @media screen and (max-width:$media-threshold) {
+    padding: 4% 5%;
+  }
 }
 
 %shop__panel_product {
   width: auto;
-  height: 86%;
+  height: 100%;
   margin: 0 5% 0 0;
   border: 1px solid #fff;
   &.open {
@@ -300,6 +235,11 @@
   }
   &.closed {
     @include animate(animate-panel-img--close, $animate-duration-panel-image--opened, 1, $ease-in-out, normal, forwards, running);
+  }
+
+  /* Internal Media Query */
+  @media screen and (max-width:$media-threshold) {
+    height: 100%;
   }
 }
 
@@ -320,6 +260,10 @@
   max-width: 80%;
   line-height: 150%;
   color: $color-black;
+
+  /* Internal Media Query */
+  @media screen and (max-width:$media-threshold) {
+  }
 }
 
 %shop__panel_brand {
@@ -346,7 +290,7 @@
 %shop__panel_cta {
   position: relative;
   opacity: 1;
-  width: 50%;
+  width: 36%;
   height: 22.5%;
   img {
     box-shadow: 1px 1px 1px #aaa;
@@ -354,22 +298,38 @@
     height: 100%;
   }
   @extend %util__selected;
+
+  /* Internal Media Query */
+  @media screen and (max-width:$media-threshold) {
+
+    width: 40%;
+    bottom: -15%;
+    position: relative;
+    height: auto;
+  }
 }
 
 %shop__panel_close {
   top: 10px;
-  left: 92.5%;
+  left: 91%;
   fill: red;
   width: calc(12px + (24 - 12) * (100vw - 320px) / (640 - 320) );
   height: calc(12px + (24 - 12) * (100vw - 320px) / (640 - 320) );
   border-radius: calc(12px + (24 - 12) * (100vw - 320px) / (640 - 320) );
   position: absolute;
-  box-shadow: 0px 0.5px 1px #666;
   @extend %util__selected;
   path {
     fill: #008fd5;
     stroke: #ccc;
     stroke-width: 1;
+  }
+
+  /* Internal Media Query */
+  @media screen and (max-width:$media-threshold) {
+    top: initial;
+    margin-top: -2%;
+    left: 92%;
+    width: 5%;
   }
 }
 
@@ -378,24 +338,29 @@
   display: block;
   width: 100%;
   height: 100%;
-  @include animate(animate-panel-img--open, $animate-duration-panel-image--opened, 1, $ease-in-out, normal, forwards, running);
+  @include animate(animate-panel-img--open, $animate-duration-player--opened, 1, $ease-in-out, normal, forwards, running);
 }
 
 %shop__bg__player {
   opacity: 0;
   width: 100%;
   height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100% !important;
   &.shop__bg__player--ready {
-    @include animate(animate-generic--open, $animate-duration-panel-image--opened, 1, $ease-in-out, normal, forwards, running);
+    @include animate(animate-generic--open, $animate-duration-player--opened, 1, $ease-in-out, normal, forwards, running);
   }
 }
 
 %shop__screen {
-  width: 100%;
-  height: 100%;
+  width: 660px;
+  height: 960px;
   display: block;
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: -4px;
   left: 0;
+  margin-top: -100vh;
   z-index: 50;
 }

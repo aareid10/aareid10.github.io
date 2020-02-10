@@ -10,9 +10,9 @@
  * @since 1.0.0
  */
 
-import StateGlobal from '../states/state.global';
-import ShopHotspot from '../classes/shopHotspot';
-import ShopPanel from '../classes/shopPanel';
+import StateGlobal from '@states/state.global';
+import ShopHotspot from '@classes/shopHotspot';
+import ShopPanel from '@classes/shopPanel';
 
 const shopunit = {
   app: document.querySelector('#shopunit'),

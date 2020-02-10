@@ -1,6 +1,6 @@
 import TypeIt from 'typeit';
-import StateGlobal from '../states/state.global';
-import StateHotspots from '../data/hotspots.json';
+import StateGlobal from '@states/state.global';
+import StateHotspots from '@data/hotspots.json';
 
 export default class ShopHotspot {
   /**
