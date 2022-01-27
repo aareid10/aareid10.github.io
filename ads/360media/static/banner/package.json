@@ -101,6 +101,6 @@
   "tailwindcss-transitions": "^2.0.1",
   "tailwindcss-typography": "^2.1.1",
   "testdouble": "^3.12.4",
-  "three": "^0.110.0"
+  "three": "^0.137.0"
  }
 }
